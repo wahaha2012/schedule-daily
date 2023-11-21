@@ -24,9 +24,9 @@ export default defineComponent({
   },
   computed: {
     styleText() {
-      const { startTime, endTime, bgColor } = this.item;
+      const { startTime, endTime, bgColor, color } = this.item;
       const timeLength = getTimeRangeMinutes(startTime, endTime);
-      return `background-color: ${bgColor}; height:${
+      return `background-color: ${bgColor};color:${color}; height:${
         (timeLength / fullDayTimeLength) * this.totalHeight
       }px`;
     },
@@ -44,7 +44,7 @@ export default defineComponent({
   .title {
     font-weight: 500;
     padding: 4px 10px;
-    background-color: rgba(230, 230, 210, 1);
+    // background-color: rgba(255, 255, 255, 1);
     border-radius: 6px;
     margin-left: 6px;
   }

@@ -50,7 +50,7 @@ export default defineComponent({
       }
 
       const unitHeight = this.totalHeight / 24;
-      console.log("unitHeight", unitHeight);
+      // console.log("unitHeight", unitHeight);
       return result
         .map((scale, i) => ({
           value:

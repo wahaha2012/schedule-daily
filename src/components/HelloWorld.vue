@@ -41,7 +41,11 @@ export default defineComponent({
   computed: {
     currentTimeStyle() {
       const timeRangeMinutes = getTimeRangeMinutes("00:00", this.currentTime);
-      return `top: ${(timeRangeMinutes / fullDayTimeLength) * 100}vh`;
+      return `top: ${
+        (timeRangeMinutes / fullDayTimeLength) *
+          document.documentElement.clientHeight +
+        7
+      }px`;
     },
   },
   methods: {
@@ -60,7 +64,8 @@ export default defineComponent({
 .daily-schedule {
   width: 100vw;
   height: 100vh;
-  background: rgba(250, 250, 235, 1);
+  overflow: hidden;
+  // background: rgba(250, 250, 235, 1);
   display: flex;
   .time-scale {
     width: 60px;
@@ -69,7 +74,9 @@ export default defineComponent({
   .schedule {
     padding-top: 7px;
     flex: 1;
-    background-color: rgba(255, 255, 240, 1);
+    // background-color: rgba(255, 255, 240, 1);
+    border-left: #dedede 1px solid;
+    border-right: #dedede 1px solid;
   }
   .calendar {
     width: 260px;
