@@ -6,14 +6,17 @@
         <span class="time-info">{{ currentTime }}</span>
       </div>
     </div>
-    <div class="schedule">
+    <div
+      class="schedule"
+      :style="`background-color: ${scheduleConfig[0].bgColor}`"
+    >
       <ScheduleItem
         v-for="item in scheduleConfig"
         :item="item"
         :key="item.startTime"
       ></ScheduleItem>
     </div>
-    <div class="calendar"></div>
+    <!-- <div class="calendar"></div> -->
   </div>
 </template>
 
@@ -76,7 +79,6 @@ export default defineComponent({
   .schedule {
     padding-top: 7px;
     flex: 1;
-    // background-color: rgba(255, 255, 240, 1);
     border-left: #dedede 1px solid;
     border-right: #dedede 1px solid;
   }
@@ -88,7 +90,8 @@ export default defineComponent({
     left: 40px;
     top: 0px;
     border-top: rgba(255, 130, 100, 1) 1px solid;
-    width: calc(100vw - 300px);
+    // width: calc(100vw - 300px);
+    width: 100vw;
     font-size: 11px;
     color: rgb(255, 230, 230);
     .time-info {
