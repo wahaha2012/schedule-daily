@@ -2,7 +2,9 @@
   <div class="daily-schedule">
     <div class="time-scale">
       <TimeScale></TimeScale>
-      <div class="current-time" :style="currentTimeStyle"></div>
+      <div class="current-time" :style="currentTimeStyle">
+        <span class="time-info">{{ currentTime }}</span>
+      </div>
     </div>
     <div class="schedule">
       <ScheduleItem
@@ -87,6 +89,17 @@ export default defineComponent({
     top: 0px;
     border-top: rgba(255, 130, 100, 1) 1px solid;
     width: calc(100vw - 300px);
+    font-size: 11px;
+    color: rgb(255, 230, 230);
+    .time-info {
+      // position: absolute;
+      // left: -34px;
+      // top: -6px;
+      background: rgba(255, 130, 100, 1);
+      border-radius: 0 0 4px 4px;
+      display: inline-block;
+      padding: 0 2px;
+    }
   }
 }
 </style>
