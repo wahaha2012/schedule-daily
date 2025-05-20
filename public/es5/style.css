@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.daily-schedule {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+.daily-schedule .time-scale {
+  width: 60px;
+  position: relative;
+}
+.daily-schedule .schedule {
+  padding-top: 7px;
+  flex: 1;
+  border-left: #dedede 1px solid;
+  border-right: #dedede 1px solid;
+}
+.daily-schedule .calendar {
+  width: 260px;
+}
+.daily-schedule .current-time {
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  border-top: rgba(255, 130, 100, 1) 1px solid;
+  width: 100vw;
+  font-size: 11px;
+  color: rgb(255, 230, 230);
+}
+.daily-schedule .current-time .time-info {
+  background: rgba(255, 130, 100, 1);
+  border-radius: 0 0 4px 4px;
+  display: inline-block;
+  padding: 0 2px;
+}
+
+.time-schedule-item {
+  position: absolute;
+  color: #666;
+  width: 100%;
+}
+.time-schedule-item .text {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  font-size: 13px;
+}
+.time-schedule-item .line {
+  border-top: #dedede 1px solid;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 23px;
+}
+
+.schedule-item  {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-bottom: #dedede 1px dashed;
+}
+.schedule-item .title {
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+.schedule-item .description {
+  padding: 10px;
+  line-height: 1.5;
+}
